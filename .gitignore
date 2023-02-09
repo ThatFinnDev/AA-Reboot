@@ -1,7 +1,5 @@
 *.DS_Store
 *.o
-appstore.*
-.gitignore
 repos.json
 settings.json
 build/*
@@ -12,3 +10,5 @@ build_*
 *.rpx
 *.nro
 *.elf
+*.nacp
+.vscode
