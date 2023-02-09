@@ -1,0 +1,14 @@
+*.DS_Store
+*.o
+appstore.*
+.gitignore
+repos.json
+settings.json
+build/*
+sdroot
+build_*
+*.dol
+*.3dsx
+*.rpx
+*.nro
+*.elf
