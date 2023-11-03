@@ -40,7 +40,7 @@ include $(DEVKITPRO)/libnx/switch_rules
 
 APP_TITLE   := 	AA-Reboot
 APP_AUTHOR  := 	ThatFinn
-APP_VERSION := 	1.0
+APP_VERSION := 	1.1
 ICON 		:=	source/Icon.jpg
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build

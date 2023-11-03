@@ -62,10 +62,18 @@ int main(int argc, char **argv)
     } else {
         FILE *f = fopen("sdmc:/hekate.bin", "rb");
         if (f == NULL) {
-        
             consoleInit(NULL);
-            printf("Failed to open hekate.bin!\n");
-            can_reboot = false;
+            FILE *c = fopen("sdmc:/bootloader/update.bin", "rb");
+            if (c == NULL) {
+            
+                consoleInit(NULL);
+                printf("Failed to open update.bin!\n");
+                can_reboot = false;
+            } else {
+                fread(g_reboot_payload, 1, sizeof(g_reboot_payload), c);
+                fclose(c);
+            }
+            
         } else {
             fread(g_reboot_payload, 1, sizeof(g_reboot_payload), f);
             fclose(f);
